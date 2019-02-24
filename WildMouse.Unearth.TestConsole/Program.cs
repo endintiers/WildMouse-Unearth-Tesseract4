@@ -16,8 +16,8 @@ namespace WildMouse.Unearth.TestConsole
             Console.WriteLine("---------------------------------------------------------------------");
 
             // More complex version showing JSON result. You can use getHOCR or getXHTML as well 
-            var sorry = Image.FromFile(Environment.CurrentDirectory + @"\Images\ProjectBackground.png");
-            var result = TesseractHelper.OCRImageResult(sorry, getJSON: true);
+            var projback = Image.FromFile(Environment.CurrentDirectory + @"\Images\ProjectBackground.png");
+            var result = TesseractHelper.OCRImageResult(projback, getJSON: true);
             Console.WriteLine(result.Text);
             Console.WriteLine();
             Console.WriteLine($"Mean Confidence: {result.MeanConfidence}");
